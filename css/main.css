@@ -1,5 +1,6 @@
 body{
     padding-top: 67px;
+    background-color: #474f56;
 }
 
 table.table-pizza{
@@ -7,11 +8,13 @@ table.table-pizza{
 }
 
 .navbar{
-    border-bottom: solid 1px #DA2037;
+    -webkit-box-shadow: 0 6px 4px -4px black;
+    -moz-box-shadow: 0 6px 4px -4px black;
+    box-shadow: 0 6px 8px -2px black !important;
 }
 
-.active a{
-    background-color: #474f56;
+a.active{
+    background-color: #474f56 !important;
     font-weight: bold;
 }
 

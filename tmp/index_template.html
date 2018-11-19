@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Braiz'Pizza</title>
+
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="icon" href="img/braiz_logo.png" type="image/png">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
         <!-- Fontawesome 5 -->
@@ -13,47 +15,66 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/main.css">
     </head>
-  <body data-spy="scroll" data-target="#navbar">
-    <nav id="navbar" class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+  <body data-spy="scroll" data-target="#navbar" data-offset="67">
+    <nav id="navbar" class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top shadow">
         <a class="navbar-brand" href="#">
             <img src="img/braiz_logo.png" style="width:40px; height: 40px;">
             Braiz'Pizza
         </a>
-        <div class="collapse navbar-collapse">
-            <ul class="nav nav-pills mr-auto">
+        
+        <div id="collapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-danger" href="#fat">
+                    <a class="nav-link text-danger" href="#nos_pizzas">
                         Carte des pizzas 
                         <i class="fa fa-cookie "></i>
                     </a>                
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-warning" href="#mdo">
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="#commander">
                         Commander 
                         <i class="fa fa-phone"></i>
                     </a>
                 </li>
             </ul>
-            <ul class="nav nav-pills ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <span id="list-count" class="badge badge-danger">4</span>
-                        <i class="fa fa-clipboard-list fa-lg"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <table id="command" class="table">
-                            
-                        </table>
-                    </div>
-                </li>
-            </ul>
         </div>
+        <ul class="nav nav-pills ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span id="list-count" class="badge badge-danger">4</span>
+                    <i class="fa fa-clipboard-list fa-lg"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <table id="command" class="table">
+                        
+                    </table>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" data-target="#collapse" aria-controls="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </li>
+        </ul>
     </nav>
     <main class="container-fluid">
         <section class="row" style="background-color: #DA2037">
             <div class="container">
-                <h1>Nos pizzas</h1>
+                <h1 id="nos_pizzas">Nos pizzas</h1>
                 {carte_pizzas}      
+            </div>
+        </section>
+        <section class="row bg-warning">
+            <div class="container">
+                <h1 id="commander">Commander</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Ma commande</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Horaires</h2>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

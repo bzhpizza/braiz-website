@@ -53,6 +53,10 @@ function delPizza(pizza){
     }
 }
 
+function delAllPizzas(pizza){
+    delete command[pizza];
+}
+
 function addtocart(elt){
     var pizza = elt.parentNode.parentNode.querySelector('[pizza-name]').innerHTML.trim();
     addPizza(pizza);
@@ -61,7 +65,10 @@ function addtocart(elt){
 }
 
 function delfromcart(elt){
-    console.log('deleting item')
+    var pizza = elt.parentNode.parentNode.querySelector('[pizza-name]').innerHTML.trim();
+    delAllPizzas(pizza);
+    saveCommand();
+    updateCommandDisplay();
 }
 
 /* display utils */
@@ -71,6 +78,7 @@ function createRow(pizza, quantity){
     let row = document.createElement('tr');
 
     let td1 = document.createElement('td');
+    td1.setAttribute('pizza-name', '');
     let td2 = document.createElement('td');
     let td3 = document.createElement('td');
     let td4 = document.createElement('td');
