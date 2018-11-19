@@ -1,0 +1,24 @@
+body{
+    padding-top: 67px;
+}
+
+table.table-pizza{
+    color: white !important;
+}
+
+.navbar{
+    border-bottom: solid 1px #DA2037;
+}
+
+.active a{
+    background-color: #474f56;
+    font-weight: bold;
+}
+
+.fa.fa-plus{
+    font-size: 10px;
+}
+
+a[onclick]{
+    cursor: pointer;
+}

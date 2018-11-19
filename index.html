@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+   Title
+        </title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+        <!-- Bootstrap CSS -->
+        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" rel="stylesheet">
+        <!-- Fontawesome 5 -->
+        <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body data-spy="scroll" data-target="#navbar">
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top" id="navbar">
+            <a class="navbar-brand" href="#">
+                <img src="img/braiz_logo.png" style="width:40px; height: 40px;">
+    Braiz'Pizza
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="nav nav-pills mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#fat">
+                            Carte des pizzas
+                            <i class="fa fa-cookie ">
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-warning" href="#mdo">
+                            Commander
+                            <i class="fa fa-phone">
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-pills ml-auto">
+                    <li class="nav-item dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+                            <span class="badge badge-danger" id="list-count">
+                                4
+                            </span>
+                            <i class="fa fa-clipboard-list fa-lg">
+                            </i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <table class="table" id="command">
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="container-fluid">
+            <section class="row" style="background-color: #DA2037">
+                <div class="container">
+                    <h1>
+                        Nos pizzas
+                    </h1>
+                    <article>
+                        <h2>
+                            BASE TOMATE
+                        </h2>
+                        <table class="table table-pizza">
+                            <tbody>
+                                <tr>
+                                    <td pizza-name="">
+                                        Marguerita
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Tomate
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        7,00&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Reine
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Champignon
+                                        </span>
+                                        <span class="ingr">
+                                            jambon
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        8,80&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Bacon
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Bacon
+                                        </span>
+                                        <span class="ingr">
+                                            oeuf
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        8,80&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Royale
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Champignon
+                                        </span>
+                                        <span class="ingr">
+                                            jambon
+                                        </span>
+                                        <span class="ingr">
+                                            oeuf
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,00&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        L&eacute;gumes
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Champignon
+                                        </span>
+                                        <span class="ingr">
+                                            oignon
+                                        </span>
+                                        <span class="ingr">
+                                            poivron
+                                        </span>
+                                        <span class="ingr">
+                                            ch&egrave;vre
+                                        </span>
+                                        <span class="ingr">
+                                            mozarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Lannionaise
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Poivron
+                                        </span>
+                                        <span class="ingr">
+                                            oignon
+                                        </span>
+                                        <span class="ingr">
+                                            thon
+                                        </span>
+                                        <span class="ingr">
+                                            ch&egrave;vre
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Bolognaise
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Bolognaise maison
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Tartiflette
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Pomme de terre
+                                        </span>
+                                        <span class="ingr">
+                                            oignon
+                                        </span>
+                                        <span class="ingr">
+                                            lardons
+                                        </span>
+                                        <span class="ingr">
+                                            raclette
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Italienne
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Jambon de pays
+                                        </span>
+                                        <span class="ingr">
+                                            parmesan
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Cr&eacute;ole
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Jambon ou poulet
+                                        </span>
+                                        <span class="ingr">
+                                            ananas
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Saumon
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Saumon fum&eacute;
+                                        </span>
+                                        <span class="ingr">
+                                            cr&egrave;me fraiche
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Bretonne
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Pomme de terre
+                                        </span>
+                                        <span class="ingr">
+                                            champignon
+                                        </span>
+                                        <span class="ingr">
+                                            andouille
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Sardinette
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Sardines
+                                        </span>
+                                        <span class="ingr">
+                                            oignons
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Plouber
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Lardons
+                                        </span>
+                                        <span class="ingr">
+                                            ch&egrave;vre
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Basquaise
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Poulet
+                                        </span>
+                                        <span class="ingr">
+                                            oignon
+                                        </span>
+                                        <span class="ingr">
+                                            poivrons
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Poulet
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Pomme de terre
+                                        </span>
+                                        <span class="ingr">
+                                            oignon
+                                        </span>
+                                        <span class="ingr">
+                                            poulet
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Orientale
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Oignon
+                                        </span>
+                                        <span class="ingr">
+                                            poivron
+                                        </span>
+                                        <span class="ingr">
+                                            merguez
+                                        </span>
+                                        <span class="ingr">
+                                            chorizo
+                                        </span>
+                                        <span class="ingr">
+                                            oeuf
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Mexicaine
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Poivron
+                                        </span>
+                                        <span class="ingr">
+                                            haricots rouges
+                                        </span>
+                                        <span class="ingr">
+                                            viande hach&eacute;e
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        3 Fromages
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Ch&egrave;vre
+                                        </span>
+                                        <span class="ingr">
+                                            bleu
+                                        </span>
+                                        <span class="ingr">
+                                            brie
+                                        </span>
+                                        <span class="ingr">
+                                            raclette
+                                        </span>
+                                        <span class="ingr">
+                                            ou parmesan ...au choix
+                                        </span>
+                                    </td>
+                                    <td>
+                                        8,50&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        4 Fromages
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Ch&egrave;vre
+                                        </span>
+                                        <span class="ingr">
+                                            bleu
+                                        </span>
+                                        <span class="ingr">
+                                            brie
+                                        </span>
+                                        <span class="ingr">
+                                            raclette
+                                        </span>
+                                        <span class="ingr">
+                                            ou parmesan ...au choix
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,50&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                    <article>
+                        <h2>
+                            BASE CR&Egrave;ME
+                        </h2>
+                        <table class="table table-pizza">
+                            <tbody>
+                                <tr>
+                                    <td pizza-name="">
+                                        Dijonnaise
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Cr&egrave;me moutard&eacute;e
+                                        </span>
+                                        <span class="ingr">
+                                            poulet
+                                        </span>
+                                        <span class="ingr">
+                                            champignon
+                                        </span>
+                                        <span class="ingr">
+                                            poivron
+                                        </span>
+                                        <span class="ingr">
+                                            origan
+                                        </span>
+                                        <span class="ingr">
+                                            mozarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Braiz'Pizza
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Pomme de terre
+                                        </span>
+                                        <span class="ingr">
+                                            poulet ou saumon
+                                        </span>
+                                        <span class="ingr">
+                                            raclette
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Braiz'Curry
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Cr&egrave;me curry
+                                        </span>
+                                        <span class="ingr">
+                                            poivron
+                                        </span>
+                                        <span class="ingr">
+                                            champignon
+                                        </span>
+                                        <span class="ingr">
+                                            poulet
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Alsacienne
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Lardons fum&eacute;s
+                                        </span>
+                                        <span class="ingr">
+                                            oignon
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Miel'Pizza
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Ch&egrave;vre
+                                        </span>
+                                        <span class="ingr">
+                                            miel
+                                        </span>
+                                        <span class="ingr">
+                                            jambon ou poulet
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td pizza-name="">
+                                        Braiz'Fines Herbes
+                                    </td>
+                                    <td>
+                                        <span class="ingr">
+                                            Thon
+                                        </span>
+                                        <span class="ingr">
+                                            oignons
+                                        </span>
+                                        <span class="ingr">
+                                            mozzarella
+                                        </span>
+                                        <span class="ingr">
+                                            fromage ail et fines herbes
+                                        </span>
+                                    </td>
+                                    <td>
+                                        9,90&euro;
+                                    </td>
+                                    <td>
+                                        <a onclick="addtocart(this)">
+                                            <i class="fa fa-plus fa-sm">
+                                            </i>
+                                            <i class="fa fa-clipboard-list">
+                                            </i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+        </script>
+        <script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+        </script>
+        <script crossorigin="anonymous" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js">
+        </script>
+        <script src="js/pizzas-picker.js">
+        </script>
+    </body>
+</html>

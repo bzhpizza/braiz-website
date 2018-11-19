@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+        <!-- Fontawesome 5 -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+  <body data-spy="scroll" data-target="#navbar">
+    <nav id="navbar" class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="img/braiz_logo.png" style="width:40px; height: 40px;">
+            Braiz'Pizza
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="nav nav-pills mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="#fat">
+                        Carte des pizzas 
+                        <i class="fa fa-cookie "></i>
+                    </a>                
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-warning" href="#mdo">
+                        Commander 
+                        <i class="fa fa-phone"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav nav-pills ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span id="list-count" class="badge badge-danger">4</span>
+                        <i class="fa fa-clipboard-list fa-lg"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <table id="command" class="table">
+                            
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <section class="row" style="background-color: #DA2037">
+            <div class="container">
+                <h1>Nos pizzas</h1>
+                {carte_pizzas}      
+            </div>
+        </section>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="js/pizzas-picker.js"></script>
+    </body>
+</html>
