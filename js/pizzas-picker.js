@@ -66,6 +66,13 @@ function addtocart(elt){
 
 function delfromcart(elt){
     var pizza = elt.parentNode.parentNode.querySelector('[pizza-name]').innerHTML.trim();
+    delPizza(pizza);
+    saveCommand();
+    updateCommandDisplay();
+}
+
+function delallfromcart(elt){
+    var pizza = elt.parentNode.parentNode.querySelector('[pizza-name]').innerHTML.trim();
     delAllPizzas(pizza);
     saveCommand();
     updateCommandDisplay();
@@ -85,8 +92,8 @@ function createRow(pizza, quantity){
 
     td1.innerHTML = pizza;
     td2.innerHTML = 'x'+quantity;
-    td3.innerHTML = '<a onclick="decrementfromcart(this)"><i class="fa fa-minus text-warning"></i></a>';
-    td4.innerHTML = '<a onclick="delfromcart(this)"><i class="fa fa-times text-danger"></i></a>';
+    td3.innerHTML = '<a onclick="delfromcart(this)"><i class="fa fa-minus text-warning"></i></a>';
+    td4.innerHTML = '<a onclick="delallfromcart(this)"><i class="fa fa-times text-danger"></i></a>';
 
     row.appendChild(td1);
     row.appendChild(td2);
