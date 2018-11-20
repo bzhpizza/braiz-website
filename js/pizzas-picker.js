@@ -91,7 +91,7 @@ function createRow(pizza, quantity){
     let td4 = document.createElement('td');
 
     td1.innerHTML = pizza;
-    td2.innerHTML = 'x'+quantity;
+    td2.innerHTML = 'x' + quantity;
     td3.innerHTML = '<a onclick="delfromcart(this)"><i class="fa fa-minus text-warning"></i></a>';
     td4.innerHTML = '<a onclick="delallfromcart(this)"><i class="fa fa-times text-danger"></i></a>';
 
