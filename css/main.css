@@ -26,6 +26,16 @@ a[onclick]{
     cursor: pointer;
 }
 
+@font-face {
+    font-family: BraizFont;
+    src: url('font/Quesha.ttf');
+}
+
+h1, h2, .navbar-brand{
+    font-family: BraizFont;
+    font-weight: bold;
+}
+
 main > .row{
     border-bottom: solid 2px black;
     padding-bottom: 15px;
